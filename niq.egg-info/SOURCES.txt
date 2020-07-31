@@ -1,0 +1,9 @@
+README.md
+setup.py
+niq/__init__.py
+niq/cli.py
+niq.egg-info/PKG-INFO
+niq.egg-info/SOURCES.txt
+niq.egg-info/dependency_links.txt
+niq.egg-info/entry_points.txt
+niq.egg-info/top_level.txt

@@ -66,6 +66,7 @@ def main():
     parser.add_argument('query', nargs='*')
     parser.add_argument('-u', '--update', action='store_true')
     parser.add_argument('-s', '--statistics', action='store_true')
+    parser.add_argument('-f', '--force', action='store_true')
     args = parser.parse_args()
 
     if len(args.query) == 0 and not args.update and not args.statistics:
@@ -77,10 +78,12 @@ def main():
     if args.statistics:
         return show_statistics(pkgs)
 
-    if len(pkgs) < 100:
+    if len(pkgs) < 100 or args.force:
         for pkg_name, pkg_info in pkgs.items():
             print('')
             show_package_info(pkg_name, pkg_info)
+    else:
+       print('To force niq to show more than 100 results, use -f/--force')
 
 
 if __name__ == '__main__':
