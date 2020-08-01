@@ -1,2 +1,5 @@
 /.vscode
 /result
+
+__pycache__
+niq.egg-info

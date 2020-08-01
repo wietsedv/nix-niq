@@ -1,3 +1,0 @@
-[console_scripts]
-niq = niq.cli:main
-
