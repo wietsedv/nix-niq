@@ -2,7 +2,6 @@ from setuptools import setup
 
 setup(
     name='niq',
-    version='0.1',
     description='Fast Nixpkgs Quering',
     author='Wietse de Vries',
     author_email='wietse.de.vries@rug.nl',
