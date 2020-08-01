@@ -2,6 +2,7 @@
 
 from argparse import ArgumentParser
 from pathlib import Path
+import sys
 import requests
 import pickle
 from collections import Counter
@@ -69,7 +70,8 @@ def main():
     args = parser.parse_args()
 
     if len(args.query) == 0 and not args.update and not args.statistics:
-        return
+        print('no valid argument given. See --help for more information')
+        sys.exit(1)
 
     pkgs = load_channel(NIX_CHANNEL, NIX_CHANNEL_URL, args.update)
     filter_pkgs(pkgs, args.query)
