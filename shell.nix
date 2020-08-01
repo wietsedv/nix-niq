@@ -1,10 +1,9 @@
 { pkgs ? import <nixpkgs> {} }:
-with pkgs.python38Packages;
 
-buildPythonPackage rec {
+pkgs.mkShell rec {
   name = "niq";
   src = ./.;
-  buildInputs = [
+  buildInputs = with pkgs.python38Packages; [
     requests
     brotli
     flake8

@@ -85,7 +85,7 @@ def main():
             print('')
             show_package_info(pkg_name, pkg_info)
     else:
-       print('To force niq to show more than 100 results, use -f/--force')
+        print('To force niq to show more than 100 results, use -f/--force')
 
 
 if __name__ == '__main__':
